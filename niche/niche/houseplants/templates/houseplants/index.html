@@ -1,0 +1,9 @@
+{% if plant_list %}
+    <ul>
+    {% for plant in plant_list %}
+        <li><a href="{% url 'detail' plant.id %}">{{ plant.scientific_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No plants available.</p>
+{% endif %}

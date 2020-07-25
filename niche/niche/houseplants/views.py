@@ -1,7 +1,14 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, get_object_or_404
+
+from .models import Plant
 
 
-# Testing View, will dissapear later.
 def index(request):
-    return HttpResponse("Zamioculas Zamifolia")
+    plant_list = Plant.objects.order_by('scientific_name')
+    context = {'plant_list': plant_list}
+    return render(request, 'houseplants/index.html', context)
 
+
+def detail(request, plant_id):
+    plant = get_object_or_404(Plant, pk=plant_id)
+    return render(request, 'houseplants/detail.html', {'plant': plant})
