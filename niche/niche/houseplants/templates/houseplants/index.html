@@ -1,9 +1,25 @@
+{% extends "houseplants/base.html" %}
+{% block content %}
 {% if plant_list %}
-    <ul>
+<div class="container">
+<h1>Plant Table</h1>
+  <p>This table contains all the plants:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Scientific Name</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for plant in plant_list %}
-        <li><a href="{% url 'detail' plant.id %}">{{ plant.scientific_name }}</a></li>
+      <tr>
+        <td><a href="{% url 'detail' plant.id %}">{{ plant.scientific_name }}</a></td>
+      </tr>
     {% endfor %}
-    </ul>
+    </tbody>
+  </table>
+</div>
 {% else %}
     <p>No plants available.</p>
 {% endif %}
+{% endblock content %}
