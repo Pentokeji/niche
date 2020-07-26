@@ -1,0 +1,29 @@
+{% extends "houseplants/base.html" %}
+{% block content %}
+{% if activity_list %}
+<div class="container">
+<h1>Activity Table</h1>
+  <p>These are the possible activities, you can do with a plant:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Activity</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for activity in activity_list %}
+      <tr>
+        <td>{{ activity.id }}</td>
+        <td>{{ activity.name }}</td>
+        <td>{{ activity.description }}<td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+    <p>No activities available.</p>
+{% endif %}
+{% endblock content %}

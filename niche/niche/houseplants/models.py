@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 
 # Create your models here.
@@ -18,3 +19,27 @@ class Plant(models.Model):
 
     def __str__(self):
         return self.scientific_name
+
+
+# Keeping Track of the different possible activities.
+class Activity(models.Model):
+    name = models.TextField(default=" ", max_length=50)
+    description = models.TextField(default="Activity Description", max_length=200)
+
+    def __str__(self):
+        return self.name
+
+
+# Tracking information about the plants.
+class PlantLog(models.Model):
+    plant = models.ForeignKey(Plant, on_delete=models.CASCADE)
+    date = models.DateField(default=date.today())
+    activity = models.ForeignKey(Activity, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "%s %s %s" % (self.date, self.plant, self.activity)
+    
+    class Meta:
+        ordering = ['date']
+
+    

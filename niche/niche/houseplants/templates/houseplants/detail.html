@@ -1,7 +1,21 @@
 {% extends "houseplants/base.html" %}
 {% block content %}
-<div>
-<img src="https://media.giphy.com/media/WPtzVOKMymmZrJv8fO/giphy.gif" alt="Flowering Dino" width="250" height="250">
-<p>Scientific Name: {{ plant }}</p>
+<div class="containter">
+    <div>
+        <img src="https://media.giphy.com/media/WPtzVOKMymmZrJv8fO/giphy.gif" alt="Flowering Dino" width="250" height="250">
+        <p>Scientific Name: {{ plant }}</p>
+    </div>
+    <div>
+        <p>Last watering Date:</p><p>{{ last_watering.date }}</p>
+        <p>Last fertilized Date:</p><p>{{ last_fertilized.date }}</p>
+    </div>
+    <form action="{% url 'houseplants:water' plant.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" id="water_button" value="Watering">
+    </form>
+     <form action="{% url 'houseplants:fertilize' plant.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" id="fertilizer_button" value="Fertilizier">
+    </form>
 </div>
 {% endblock content %}

@@ -7,19 +7,27 @@
   <table class="table table-striped">
     <thead>
       <tr>
+        <th>Plant ID</th>
         <th>Scientific Name</th>
+        <th>Last Water Date</th>
+        <th>Last Fertilized Date<th>
       </tr>
     </thead>
     <tbody>
     {% for plant in plant_list %}
       <tr>
-        <td><a href="{% url 'detail' plant.id %}">{{ plant.scientific_name }}</a></td>
+        <td>{{ plant.id }}</td>
+        <td><a href="{% url 'houseplants:detail' plant.id %}">{{ plant.scientific_name }}</a></td>
+        <td>{{ watering_list.date }}</td>
+        <td>{{ fertilize_list.date }}</td>
       </tr>
     {% endfor %}
     </tbody>
   </table>
 </div>
+<button type="button" id="add-plant" href="href="{% url 'houseplants:log' %}">Add Plant</button>
 {% else %}
     <p>No plants available.</p>
+    <button type="button" id="add-plant" href="{% url 'houseplants:add-plant' %}">Add Plant</button>
 {% endif %}
 {% endblock content %}
