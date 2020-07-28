@@ -1,16 +1,17 @@
 {% extends "houseplants/base.html" %}
+{% load i18n %}
 {% block content %}
 {% if plant_list %}
 <div class="container">
-<h1>Plant Table</h1>
-  <p>This table contains all the plants:</p>            
+<h1>{% trans "Plant Table"%}</h1>
+  <p>{% trans "This table contains all the plants" %}</p>            
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Plant ID</th>
-        <th>Scientific Name</th>
-        <th>Last Water Date</th>
-        <th>Last Fertilized Date<th>
+        <th>{% trans "Plant ID" %}</th>
+        <th>{% trans "Scientific Name" %}</th>
+        <th>{% trans "Last Water Date" %}</th>
+        <th>{% trans "Last Fertilized Date" %}<th>
       </tr>
     </thead>
     <tbody>

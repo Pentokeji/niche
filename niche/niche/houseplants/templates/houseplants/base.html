@@ -1,8 +1,9 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Niche - Plant Inventory</title>
+  <title>Niche - {% trans "Plant Inventory" %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -27,9 +28,9 @@
       <a class="navbar-brand" href="{% url 'houseplants:index' %}">Niche</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="{% url 'houseplants:log' %}">Plant Log</a></li>
-      <li class="active"><a href="{% url 'houseplants:index' %}">Plant Inventory</a></li>
-      <li class="active"><a href="{% url 'houseplants:activities' %}">Acitivities</a></li>
+      <li class="active"><a href="{% url 'houseplants:log' %}">{% trans "Plant Log" %}</a></li>
+      <li class="active"><a href="{% url 'houseplants:index' %}">{% trans "Plant Inventory" %}</a></li>
+      <li class="active"><a href="{% url 'houseplants:activities' %}">{% trans "Activities" %}</a></li>
     </ul>
   </div>
 </nav>
