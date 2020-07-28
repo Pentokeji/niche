@@ -1,15 +1,16 @@
 {% extends "houseplants/base.html" %}
+{% load i18n %}
 {% block content %}
 {% if activity_list %}
 <div class="container">
-<h1>Activity Table</h1>
-  <p>These are the possible activities, you can do with a plant:</p>            
+<h1>{% trans "Activity Table" %}</h1>
+  <p>{% trans "These are the possible activities, you can do with a plant" %}:</p>            
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Id</th>
-        <th>Activity</th>
-        <th>Description</th>
+        <th>{% trans "ID" %}</th>
+        <th>{% trans "Activity" %}</th>
+        <th>{% trans "Description" %}</th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,6 @@
   </table>
 </div>
 {% else %}
-    <p>No activities available.</p>
+    <p>{% trans "No activities available" %}.</p>
 {% endif %}
 {% endblock content %}

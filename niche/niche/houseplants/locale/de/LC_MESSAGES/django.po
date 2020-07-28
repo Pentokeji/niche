@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-28 21:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/houseplants/activities.html:6
+msgid "Activity Table"
+msgstr "Aktivitäten Tabelle"
+
+#: templates/houseplants/activities.html:7
+msgid "These are the possible activities, you can do with a plant"
+msgstr "Mögliche Interaktionen mit Ihren Pflanzen"
+
+#: templates/houseplants/activities.html:11
+msgid "ID"
+msgstr "ID"
+
+#: templates/houseplants/activities.html:12 templates/houseplants/log.html:13
+msgid "Activity"
+msgstr "Interaktion"
+
+#: templates/houseplants/activities.html:13
+msgid "Description"
+msgstr "Beschreib"
+
+#: templates/houseplants/activities.html:28
+msgid "No activities available"
+msgstr "Noch keine Aktivitäten verfügbar"
+
+#: templates/houseplants/base.html:6 templates/houseplants/base.html:32
+msgid "Plant Inventory"
+msgstr "Pflanzen Inventar"
+
+#: templates/houseplants/base.html:31
+msgid "Plant Log"
+msgstr "Pflanzenlogbuch"
+
+#: templates/houseplants/base.html:33
+msgid "Activities"
+msgstr "Aktivitäten"
+
+#: templates/houseplants/detail.html:7 templates/houseplants/index.html:12
+msgid "Scientific Name"
+msgstr "Wissenschaftlicher Name"
+
+#: templates/houseplants/detail.html:10
+msgid "Last watering Date"
+msgstr "Gegossen am"
+
+#: templates/houseplants/detail.html:11
+msgid "Last fertilized Date"
+msgstr "Gedüngt am"
+
+#: templates/houseplants/detail.html:15
+msgid "Watering"
+msgstr "Giessen"
+
+#: templates/houseplants/detail.html:19
+msgid "Fertilizer"
+msgstr "Düngen"
+
+#: templates/houseplants/index.html:6
+msgid "Plant Table"
+msgstr "Pflanzen"
+
+#: templates/houseplants/index.html:7
+msgid "This table contains all the plants"
+msgstr "Diese Tabelle beeinhaltet alle Ihre Pflanzen "
+
+#: templates/houseplants/index.html:11
+msgid "Plant ID"
+msgstr "Pflanzen ID"
+
+#: templates/houseplants/index.html:13
+msgid "Last Water Date"
+msgstr "Gegossen am"
+
+#: templates/houseplants/index.html:14
+msgid "Last Fertilized Date"
+msgstr "Gedüngt am"
+
+#: templates/houseplants/log.html:6
+msgid "Plant Log Table"
+msgstr "Pflanzenlogbuch"
+
+#: templates/houseplants/log.html:7
+msgid "This table contains a log about all activites on that plant"
+msgstr "Diese Tabelle beeinhaltet alle vergangenen Interaktionen mit ihrer Pflanze"
+
+#: templates/houseplants/log.html:11
+msgid "Date"
+msgstr "Datum"
+
+#: templates/houseplants/log.html:12
+msgid "Plant Name"
+msgstr "Name der Pflanze"
+
+#: templates/houseplants/log.html:28
+msgid "No plants available"
+msgstr "Derzeit sind noch keine Plfanzen verfügbar"

@@ -1,15 +1,16 @@
 {% extends "houseplants/base.html" %}
+{% load i18n %}
 {% block content %}
 {% if log_list %}
 <div class="container">
-<h1>Plant Log Table</h1>
-  <p>This table contains a log about all activites on that plant:</p>            
+<h1>{% trans "Plant Log Table" %}</h1>
+  <p>{% trans "This table contains a log about all activites on that plant" %}:</p>            
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Date</th>
-        <th>Plant Name</th>
-        <th>Activity</th>
+        <th>{% trans "Date" %}</th>
+        <th>{% trans "Plant Name" %}</th>
+        <th>{% trans "Activity" %}</th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +25,6 @@
   </table>
 </div>
 {% else %}
-    <p>No plants available.</p>
+    <p>{% trans "No plants available" %}.</p>
 {% endif %}
 {% endblock content %}
