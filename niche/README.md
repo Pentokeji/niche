@@ -1,18 +1,22 @@
 ### NICHE
 
-Personal Project to track plants in our apartment.
+Track the status of your houseplants, when they have been watered / fertilized the last. How old a plant is, when it was last pruned etc.
 
 ## Features
 
-[] QR Code to scan the plant
-[] Display information about plant
-[] Get status of last watering
-[] Get status of last fertilizer added
-[] Get age of plant
+[X] QR Code to scan the plant\
+[X] Display information about plant\
+[X] Get status of last watering\
+[X] Get status of last fertilizer added\
+[] Get age of plant\
+[] Authenticate User\
+[] Personal Database\
+[] Add Multiple Languages\
+[] Print QR Codes\
 
 
 
-## Instructions of Installation
+## Installation
 
 Clone this repository to a convenient location. 
 Create a Virtual Environment, 
